@@ -1,0 +1,108 @@
+footer.comment-meta{
+    text-align: left
+}
+footer.comment-meta .comment-author b {
+    margin-left: 30px;
+    font-size: 20px;
+
+}
+.comment-metadata{
+    text-align: left;
+
+    margin-left: 90px;
+}
+.comment-metadata a{
+    text-decoration: none;
+    color: #9e9e9e;
+    font-weight: normal;
+    font-size: 12px;
+}
+.comment-reply-title{
+    text-align: center;
+}
+.comment-notes{
+    text-align: center;
+}
+.comment-form-comment,.comment-form-author,.comment-form-email,.comment-form-url{
+    text-align: center;
+    margin-bottom: 60px;
+
+}
+.comment-form-comment textarea ,.comment-form-author input,.comment-form-email input,.comment-form-url input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 4px solid #9e9e9e;
+    background: transparent;
+    width: 40%;
+    padding: 16px 0;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000;
+    transition: all .4s;
+    border-color: #000;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 500px) {
+    .comment-form-comment textarea ,.comment-form-author input,.comment-form-email input,.comment-form-url input{
+
+        width:70%
+
+    }
+}
+
+.comment-respond .form-submit input{
+    text-decoration: none;
+    background: #000;
+    border: 4px solid #000;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 12px 20px;
+    min-width: 200px;
+    transition: background .4s;
+    text-align: center;
+}
+
+.comment-respond .form-submit input:hover{
+    background: transparent;
+    color: #000;
+    border: 4px solid #000;
+    text-decoration: none;
+}
+
+.comment-respond .form-submit input:focus{
+    outline: 0;
+}
+
+.form-submit{
+    text-align: center;
+}
+
+.comments{
+    margin-bottom: 100px;
+}
+
+.reply{
+    margin-left: 90px;
+
+}
+.reply a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.comment-form{
+    text-align: center;
+
+}
+
+.post-views{
+    display: inline-block;
+
+}
