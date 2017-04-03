@@ -15,8 +15,12 @@
 retinajs();
 
 var key = jQuery('#txt_wording').val();
-var array = key.split(',');
-console.log(array);
+var array ;
+if(key){
+     array = key.split(',');
+    console.log(array);
+}
+
 
 jQuery("#slider-animation").typed({
 
