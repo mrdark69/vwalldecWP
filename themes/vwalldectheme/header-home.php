@@ -65,8 +65,8 @@
 
                             <!-- Copyright informations -->
                             <div class="copyright">
-                                <p>Made by <a href="https://themeforest.net/user/prestahome" title="PrestaHome">PrestaHome</a> . All rights reserved
-                                    2016
+                                <p>Made by <a href="https://themeforest.net/user/prestahome" title="PrestaHome">Gosolve</a> . All rights reserved
+                                    2017
                                 </p>
                             </div>
                         </div>
@@ -113,9 +113,25 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
-                            <h2><span id="slider-animation">Hello!</span></h2>
-                            <h1><span class="grey">Kate Perr</span> Here</h1>
-                            <p>creative <strong><span class="underline">photographer</span></strong> from Chicago<br>check out my <strong>portfolio & blog</strong></p>
+                            <h2><span id="slider-animation"></span></h2>
+                            <?php  $txt = get_field('v_slide_w_1', 'option');
+
+
+                                $count = count($txt);
+                                $index= 0;
+                                foreach ($txt as $i){
+                                    if($index< ($count-1))
+                                        $val .= $i['v_slide_w_2_1'] .",";
+                                    else
+                                        $val .= $i['v_slide_w_2_1'];
+                                    $index ++;
+                                }
+
+
+                            ?>
+                            <input type="hidden" id="txt_wording" value="<?php  echo $val;   ?>"?>
+                            <h1><span class="grey"><?php  echo get_field('v_slide_w_2', 'option')   ?></span></h1>
+                            <p><?php  echo get_field('v_slide_w_3', 'option')   ?></p>
                         </div>
                     </div>
                 </div>

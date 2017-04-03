@@ -106,3 +106,15 @@ footer.comment-meta .comment-author b {
     display: inline-block;
 
 }
+
+
+/*contact*/
+
+.wpcf7{
+    text-align: center;
+
+}
+
+.wpcf7 form p{
+    text-align: left;
+}

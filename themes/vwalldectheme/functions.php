@@ -121,7 +121,7 @@ function vwalldectheme_scripts() {
     }
 
 	wp_enqueue_style( 'vwalldectheme-style', get_stylesheet_uri() );
-    wp_enqueue_style( 'vwalldectheme-custom', get_theme_file_uri( '/assets/css/custom.css' ), array(), '1.2' );
+    wp_enqueue_style( 'vwalldectheme-custom', get_theme_file_uri( '/assets/css/custom.css' ), array(), '1.22' );
 	wp_enqueue_script( 'vwalldectheme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'vwalldectheme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -142,8 +142,13 @@ function vwalldectheme_scripts() {
 add_action( 'wp_enqueue_scripts', 'vwalldectheme_scripts' );
 
 add_action('init', 'init_remove_support',100);
+add_action('init', 'init_remove_support_1',100);
 function init_remove_support(){
     $post_type = 'v_products';
+    remove_post_type_support( $post_type, 'editor');
+}
+function init_remove_support_1(){
+    $post_type = 'v_port';
     remove_post_type_support( $post_type, 'editor');
 }
 
@@ -217,7 +222,13 @@ if (function_exists('acf_add_options_page')) {
         'capability' => 'edit_posts',
         'redirect' => false
     ));
-
+    acf_add_options_page(array(
+        'page_title' => 'Theme General Settings',
+        'menu_title' => 'Main Picture Wording',
+        'menu_slug' => 'theme-general-wording-settings',
+        'capability' => 'edit_posts',
+        'redirect' => false
+    ));
 }
 
 
@@ -302,6 +313,46 @@ function pietergoosen_comments( $comment, $args, $depth ) {
 
 
 
+/**
+ * Display a custom taxonomy dropdown in admin
+ * @author Mike Hemberger
+ * @link http://thestizmedia.com/custom-post-type-filter-admin-custom-taxonomy/
+ */
+add_action('restrict_manage_posts', 'tsm_filter_post_type_by_taxonomy');
+function tsm_filter_post_type_by_taxonomy() {
+    global $typenow;
+    $post_type = 'v_port'; // change to your post type
+    $taxonomy  = 'portfolio_category'; // change to your taxonomy
+    if ($typenow == $post_type) {
+        $selected      = isset($_GET[$taxonomy]) ? $_GET[$taxonomy] : '';
+        $info_taxonomy = get_taxonomy($taxonomy);
+        wp_dropdown_categories(array(
+            'show_option_all' => __("Show All {$info_taxonomy->label}"),
+            'taxonomy'        => $taxonomy,
+            'name'            => $taxonomy,
+            'orderby'         => 'name',
+            'selected'        => $selected,
+            'show_count'      => true,
+            'hide_empty'      => true,
+        ));
+    };
+}
+/**
+ * Filter posts by taxonomy in admin
+ * @author  Mike Hemberger
+ * @link http://thestizmedia.com/custom-post-type-filter-admin-custom-taxonomy/
+ */
+add_filter('parse_query', 'tsm_convert_id_to_term_in_query');
+function tsm_convert_id_to_term_in_query($query) {
+    global $pagenow;
+    $post_type = 'v_port'; // change to your post type
+    $taxonomy  = 'portfolio_category'; // change to your taxonomy
+    $q_vars    = &$query->query_vars;
+    if ( $pagenow == 'edit.php' && isset($q_vars['post_type']) && $q_vars['post_type'] == $post_type && isset($q_vars[$taxonomy]) && is_numeric($q_vars[$taxonomy]) && $q_vars[$taxonomy] != 0 ) {
+        $term = get_term_by('id', $q_vars[$taxonomy], $taxonomy);
+        $q_vars[$taxonomy] = $term->slug;
+    }
+}
 ////Adding the Open Graph in the Language Attributes
 //function add_opengraph_doctype( $output ) {
 //    return $output . ' xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"';
