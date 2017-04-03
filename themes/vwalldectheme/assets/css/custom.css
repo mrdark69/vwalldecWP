@@ -118,3 +118,7 @@ footer.comment-meta .comment-author b {
 .wpcf7 form p{
     text-align: left;
 }
+.wpcf7-mail-sent-ok{
+    clear: both;
+    margin-top: 20px;
+}
