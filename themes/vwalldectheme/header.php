@@ -74,8 +74,8 @@
 
                     <!-- Copyright informations -->
                     <div class="copyright">
-                        <p>Made by <a href="https://themeforest.net/user/prestahome" title="PrestaHome">PrestaHome</a> . All rights reserved
-                            2016
+                        <p>Made by <a href="http://gosolve.net/" title="Gosolve">Gosolve</a> . All rights reserved
+                            2017
                         </p>
                     </div>
                 </div>

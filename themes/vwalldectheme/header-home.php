@@ -65,7 +65,7 @@
 
                             <!-- Copyright informations -->
                             <div class="copyright">
-                                <p>Made by <a href="https://themeforest.net/user/prestahome" title="PrestaHome">Gosolve</a> . All rights reserved
+                                <p>Made by <a href="http://gosolve.net" title="Gosolve">Gosolve</a> . All rights reserved
                                     2017
                                 </p>
                             </div>
