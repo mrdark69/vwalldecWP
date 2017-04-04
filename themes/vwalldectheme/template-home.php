@@ -55,7 +55,7 @@ get_header('home'); ?>
 
 
                 <div class="more col-xs-12">
-                    <a class="animsition-link btn-normal" href="blog.html" title="Go Blog">ดูสินค้าและบริการทั้งหมด</a>
+                    <a class="animsition-link btn-normal" href="<?php echo get_site_url(); ?>/our-product/" title="Go Blog">ดูสินค้าและบริการทั้งหมด</a>
                 </div>
 
 
@@ -131,7 +131,7 @@ get_header('home'); ?>
         <div class="row">
             <div class="row">
                 <div class="more col-xs-12">
-                    <a class="animsition-link btn-normal" href="<?php echo THEME_IMG_PATH; ?>/portfolio/" title="More">ดูผลงานทั้งหมด</a>
+                    <a class="animsition-link btn-normal" href="<?php echo get_site_url(); ?>/portfolio/" title="More">ดูผลงานทั้งหมด</a>
                 </div>
             </div>
         </div>
