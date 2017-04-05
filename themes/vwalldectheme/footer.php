@@ -39,6 +39,7 @@
                     <img src="<?php echo get_field('v_site_logo_b', 'option')  ?>" title="vision space" style="height: 150px" />
 
                 </div>
+                <a style="color:#337ab7" href="<?php  echo get_field('v_setting_pdf_dl', 'option')['url']  ?>" >ท่านสามารถกดดาวโหลด โบรชัวร์ของเราได้ที่นี่</a>
 
                 <!-- Social icons -->
                 <div class="socials">
@@ -65,7 +66,9 @@
 <!--                        <li><a href="#" title="Pinterest"><span data-icon="&#xe095;"></span></a></li>-->
                     </ul>
                 </div>
+                <div>
 
+                </div>
                 <!-- Contact details -->
                 <address class="footer-contact">
                     <p><?php  echo get_field('v_phone', 'option')   ?> <br/><?php  echo get_field('v_email', 'option')   ?></p>
