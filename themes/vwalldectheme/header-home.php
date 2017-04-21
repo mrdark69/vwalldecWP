@@ -113,7 +113,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
-                            <h2><span id="slider-animation"></span></h2>
+                            <h2><span style="font-size: 28px;" id="slider-animation"></span></h2>
                             <?php  $txt = get_field('v_slide_w_1', 'option');
 
 
