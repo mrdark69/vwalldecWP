@@ -106,9 +106,9 @@
         </header>
         <!-- end HEADER -->
 
-
+<!--        get_theme_file_uri( '/assets/images/slider2.jpg' )-->
         <!-- SLIDER -->
-        <section class="full_slider full_slider_white" style="background-image: url('<?php echo get_theme_file_uri( '/assets/images/slider2.jpg' )?>')" data-rjs="2">
+        <section class="full_slider full_slider_white" style="background-image: url('<?php  echo get_field('v_header_image', 'option') ?>')" data-rjs="2">
             <div class="full_slider_one full_slider_one_white">
                 <div class="container">
                     <div class="row">
