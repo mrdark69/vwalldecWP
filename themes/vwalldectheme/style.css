@@ -25,13 +25,16 @@
 
 -----------------------------------------------------------------------------------*/
 /*-------------------------------------- 1. Default Styles --------------------------------------*/
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,800,500,700&subset=latin,latin-ext);
-@import url(https://fonts.googleapis.com/css?family=Prompt);
+/*@import url(https://fonts.googleapis.com/css?family=Raleway:400,800,500,700&subset=latin,latin-ext);*/
+@import url(https://fonts.googleapis.com/css?family=Prompt:300,400,500,600);
+/*@import url(https://fonts.googleapis.com/css?family=Kanit:300,400,500,600);*/
+
 .full_height {
 	height: 100%; }
 
 body {
 	font-family: "Prompt", Arial, sans-serif;
+	font-weight: 300;
 	margin: 0;
 	padding: 90px 0 0 0;
 	color: #000; }
