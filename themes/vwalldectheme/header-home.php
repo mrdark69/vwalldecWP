@@ -85,7 +85,7 @@
                         <div class="logo">
                             <a href="<?php echo get_site_url() ?>">
                                 <img src="<?php  echo get_field('v_site_logo', 'option')   ?>" title="vision space" style="display: none;" class="logo_white" />
-                                <img src="<?php echo get_field('v_site_logo_b', 'option')  ?>" title="vision space" class="logo_black" />
+                                <img src="<?php echo get_field('v_site_logo_2', 'option')  ?>" title="vision space" class="logo_black" />
                             </a>
                         </div>
                         <div class="menu">  <a href="#"><span data-icon="&#x61;"></span></a></div>
