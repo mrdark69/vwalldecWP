@@ -238,6 +238,19 @@ if( !defined(THEME_IMG_PATH)){
 }
 
 
+
+add_filter('pre_get_posts', 'pre_get_posts_hook' );
+
+function pre_get_posts_hook($wp_query) {
+    if (is_archive())
+    {
+        $wp_query->set( 'orderby', 'date' );
+
+        $wp_query->set( 'order', 'ASC' );
+        return $wp_query;
+    }
+}
+
 //comment custom
 function pietergoosen_comments( $comment, $args, $depth ) {
     $GLOBALS['comment'] = $comment;
