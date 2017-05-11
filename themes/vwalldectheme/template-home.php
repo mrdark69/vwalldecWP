@@ -25,7 +25,8 @@ get_header('home'); ?>
                 $args = array(
 
                     'post_type'       => 'v_products',
-
+                    'orderby' => 'date',
+                    'order' => 'ASC'
 
                 );
 
