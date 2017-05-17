@@ -77,7 +77,7 @@
 
                 <!-- Copyright informations -->
                 <div class="copyright">
-                    <p>Made by <a href="https://www.gosolve.com" title="Gosolve">Gosolve Developement</a> . All rights reserved 2017</p>
+                    <p>Made by <a href="https://www.gosolve.net" title="Gosolve">Gosolve Developement</a> . All rights reserved 2017</p>
                 </div>
             </div>
         </div>
